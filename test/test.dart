@@ -28,7 +28,7 @@ void main() {
     // Verify counter increments
     expect(find.text('0'), findsNothing);
     expect(find.text('1'), findsOneWidget);
-  }, skip: true);
+  });
 
   //////////// Screen 2: Integration Tests //////////////////
 
@@ -52,7 +52,7 @@ void main() {
     await tester.pumpAndSettle(); // Wait for animations
     // Verify the expected output
     expect(find.text("Yards: 1.0"), findsOneWidget);
-  }, skip: true);
+  });
 
   testWidgets('Converter Integration Test: 12 Feet',
       (WidgetTester tester) async {
@@ -74,7 +74,7 @@ void main() {
     await tester.pumpAndSettle(); // Wait for animations
     // Verify the expected output
     expect(find.text("Yards: 4.0"), findsOneWidget);
-  }, skip: true);
+  });
 
   //////////// Integration Tests: Screen 3 ////////////////
 
