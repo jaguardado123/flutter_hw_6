@@ -1,39 +1,46 @@
 # Homework 6 - Test Driven Development
 
-The objective for this homework practice test-driven-development (TDD). In TDD you develop your tests first and then write code to pass those tests. Here I have provided the tests for you, so your assignment is to develop code to pass the tests.
+The objective for this homework assignment is to practice Test-Driven-Development (TDD). In TDD we start by developing our tests first, then we develop the code to simply pass those tests, and lastly we refactor out code to resemble our prototype. 
 
-Tests are located under:
-integration_test/ and test/
+Remember TDD is a cycle of Fail -> Pass -> Refactor, so it's to be expected that refactoring your code may cause to tests to fail again. If this happens, simply restart the Fail -> Pass -> Refactor cycle as many times as needed.
 
-**Do NOT modify the tests**
+<img src="screenshots/refactor.png" width="300px">
 
-All you modifications/changes will go under:
-lib/screens/
+The tests that will guide your development are located in `integration_test/` and `test/`. These tests are the same except, `integration_test/` tests run if you're working on the assignment locally and `test/` tests run if you're working in Codespaces.
 
-you will change screen#.dart files.
+**Do NOT edit the tests**
 
-the starting point for the whole application is: 
-lib/main.dart
+All you modifications/changes should be on the `lib/screens/` files.
 
 ## Screen 1: Increment
 
-Write code using the techniques learned in previous labs. You should base your code on the screenshot below and the integration tests.
+**Given** you are on the Increment page **And** the counter is set to 0,
 
-The objective here is to create a counter increment app.
+**When** the increment button is clicked,
 
-<img src="screenshots/screen1.png" width="40%">
+**Then** the counter should become 1.
+
+<img src="screenshots/screen1.png" width="50%">
 
 ## Screen 2: Converter
 
-The objective here is to create a feet to yard conveter app.
+**Given** you are on the Feet Converter page **And** you input 6,
 
-<img src="screenshots/screen2.png" width="40%">
+**When** the "Convert" button is clicked,
+
+**Then** the page should show "Yards: 2".
+
+<img src="screenshots/screen2.png" width="50%">
 
 ## Screen 3: Has Numbers
 
-The objective here is to create an app to determine if an input text has numbers in it.
+**Given** you are on the Has Numbers page **And** you input "be3",
 
-<img src="screenshots/screen3.png" width="40%">
+**When** the "Find Numbers" button is clicked,
+
+**Then** the page should show "Has Numbers: true".
+
+<img src="screenshots/screen3.png" width="50%">
 
 ## Run Tests
 
