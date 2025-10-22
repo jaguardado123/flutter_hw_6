@@ -16,7 +16,7 @@ All you modifications/changes should be on the `lib/screens/` files.
 
 **Given** you are on the Increment page **And** the counter is set to 0,
 
-**When** the increment button is clicked,
+**When** you tap the increment button,
 
 **Then** the counter should become 1.
 
@@ -24,21 +24,37 @@ All you modifications/changes should be on the `lib/screens/` files.
 
 ## Screen 2: Converter
 
-**Given** you are on the Feet Converter page **And** you input 6,
+**Given** you are on the Feet Converter page **And** the page shows "Yards: 0",
 
-**When** the "Convert" button is clicked,
+**When** you type 6 into the textfield **And** tap the "Convert" button,
 
 **Then** the page should show "Yards: 2".
+
+<br>
+
+**Given** you are on the Feet Converter page **And** the page shows "Yards: 0",
+
+**When** you type "bob" into the textfield **And** tap the "Convert" button,
+
+**Then** the page should still show "Yards: 0".
 
 <img src="screenshots/screen2.png" width="50%">
 
 ## Screen 3: Has Numbers
 
-**Given** you are on the Has Numbers page **And** you input "be3",
+**Given** you are on the Has Numbers page **And** the page shows "Has Numbers: false" by default,
 
-**When** the "Find Numbers" button is clicked,
+**When** you type "be3" into the textfield **And** tap the "Find Numbers" button,
 
 **Then** the page should show "Has Numbers: true".
+
+<br>
+
+**Given** you are on the Has Numbers page **And** the page shows "Has Numbers: false" by default,
+
+**When** you type "bee" into the textfield **And** tap the "Find Numbers" button,
+
+**Then** the page should still show "Has Numbers: false".
 
 <img src="screenshots/screen3.png" width="50%">
 
