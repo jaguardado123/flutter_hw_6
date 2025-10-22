@@ -1,16 +1,16 @@
 # HW 6 - Test Driven Development
 
-The objective for this homework assignment is to practice Test-Driven-Development (TDD). In TDD we start by developing our tests first, then we develop the code to simply pass those tests, and lastly we refactor out code to resemble our prototype. 
+The objective for this homework assignment is to practice Test-Driven-Development (TDD). In TDD we start by developing our tests first, then we develop the code to simply pass those tests, and lastly we refactor our code to make it cleaner. 
 
 Remember TDD is a cycle of Fail -> Pass -> Refactor, so it's to be expected that refactoring your code may cause to tests to fail again. If this happens, simply restart the Fail -> Pass -> Refactor cycle as many times as needed.
 
 <img src="screenshots/refactor.png" width="300px">
 
-The tests that will guide your development are located in `integration_test/` and `test/`. These tests are the same except, `integration_test/` tests run if you're working on the assignment locally and `test/` tests run if you're working in Codespaces.
+The tests that will guide your development will be written in the `test/integration_tests.dart` file.
 
-**Do NOT edit the tests**
+**You must write your own tests**
 
-All you modifications/changes should be on the `lib/screens/` files.
+After writing your tests, write the code to pass your tests in the `lib/screens/` files.
 
 ## Screen 1: Increment
 
@@ -65,11 +65,5 @@ Each time you finish writting your code for a single Screen, go ahead and run th
 ### For Codespaces
 
 ```
-flutter test test/test.dart
-```
-
-### For Local Computer
-
-```
-flutter test integration_test/test.dart
+flutter test test/integration_tests.dart
 ```
