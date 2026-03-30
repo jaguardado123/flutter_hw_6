@@ -1,19 +1,13 @@
 import 'package:flutter/material.dart';
+import 'utils/guess.dart';
 
-class Screen1 extends StatefulWidget {
-  const Screen1({super.key});
-
-  @override
-  State<Screen1> createState() => _Screen1State();
-}
-
-class _Screen1State extends State<Screen1> {
-  // CREATE VARIABLE TO KEEP TRACK OF COUNTER INCREMENT
+class ResultPage extends StatelessWidget {
+  final Guess game; 
+  const ResultPage({super.key, required this.game});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(
           leading: IconButton(
             icon: const Icon(
@@ -24,23 +18,20 @@ class _Screen1State extends State<Screen1> {
               Navigator.pop(context);
             },
           ),
-          title: const Text(
-            "Increment",
+          title: Text(
+            "Guessing Game Result",
             style: TextStyle(color: Colors.white),
           ),
-          backgroundColor: Colors.blue,
+          backgroundColor: Colors.purple,
           centerTitle: true,
         ),
         body: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // CREATE CODE TO DISPLAY CURRENT COUNTER VALUE
+              Text('You ${game.getStatus()}!', style: TextStyle(fontSize: 40),)
             ],
           ),
         ),
-        // CREATE FLOATING ACTION BUTTON TO INCREMENT COUNTER
-      ),
     );
   }
 }

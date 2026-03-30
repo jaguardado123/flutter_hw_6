@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'screens/screen1.dart';
-import 'screens/screen2.dart';
-import 'screens/screen3.dart';
+import 'screens/trackpage.dart';
+import 'screens/matchpage.dart';
+import 'screens/guesspage.dart';
 
 void main() {
   runApp(const MainApp());
@@ -35,9 +35,10 @@ class Screens extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const Screen1()));
+                              builder: (context) => const TrackPage()));
                     },
-                    child: const Text("Screen 1: Increment"))),
+                    key: const Key('q1-button'),
+                    child: const Text("Q1: Track App"))),
             Padding(
                 padding: EdgeInsets.all(8.0),
                 child: ElevatedButton(
@@ -45,9 +46,10 @@ class Screens extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const Screen2()));
+                              builder: (context) => const MatchPage()));
                     },
-                    child: const Text("Screen 2: Converter"))),
+                    key: const Key('q2-button'),
+                    child: const Text("Q2: Match App"))),
             Padding(
                 padding: EdgeInsets.all(8.0),
                 child: ElevatedButton(
@@ -55,9 +57,10 @@ class Screens extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const Screen3()));
+                              builder: (context) => const GuessPage()));
                     },
-                    child: const Text("Screen 3: Has Numbers"))),
+                    key: const Key('q3-button'),
+                    child: const Text("Q3: Guessing Game"))),
           ],
         ),
       ),
