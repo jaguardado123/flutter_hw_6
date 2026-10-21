@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
-import 'screens/trackpage.dart';
-import 'screens/matchpage.dart';
-import 'screens/guesspage.dart';
+import 'screens/increment_page.dart';
+import 'screens/convert_page.dart';
+import 'screens/paper_rock_scissors_page.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const MyApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Screens(),
+      home: MainPage(),
     );
   }
 }
 
-class Screens extends StatelessWidget {
-  const Screens({super.key});
+class MainPage extends StatelessWidget {
+  const MainPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,38 +29,39 @@ class Screens extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
-                padding: EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(8.0),
                 child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const TrackPage()));
+                              builder: (context) => const IncrementPage()));
                     },
-                    key: const Key('q1-button'),
-                    child: const Text("Q1: Track App"))),
+                    key: const Key('increment-pg-button'),
+                    child: const Text("Increment Page"))),
             Padding(
-                padding: EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(8.0),
                 child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const MatchPage()));
+                              builder: (context) => const ConvertPage()));
                     },
-                    key: const Key('q2-button'),
-                    child: const Text("Q2: Match App"))),
+                    key: const Key('converter-pg-button'),
+                    child: const Text("Converter Page"))),
             Padding(
-                padding: EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(8.0),
                 child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const GuessPage()));
+                              builder: (context) =>
+                                  const PaperRockScissorsPage()));
                     },
-                    key: const Key('q3-button'),
-                    child: const Text("Q3: Guessing Game"))),
+                    key: const Key('paper-rock-scissors-pg-button'),
+                    child: const Text("Paper Rock Scissors Page"))),
           ],
         ),
       ),
