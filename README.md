@@ -1,69 +1,97 @@
 # HW 6 - Test Driven Development
 
-The objective for this homework assignment is to practice Test-Driven-Development (TDD). In TDD we start by developing our tests first, then we develop the code to simply pass those tests, and lastly we refactor our code to make it cleaner. 
+The objective for this homework assignment is to practice Test-Driven-Development (TDD). In TDD tests are developed first, followed by the code implementation with the objective to simply pass the tests, then refactoring to esnure the implemented code is written in the most efficient manner.
 
-Remember TDD is a cycle of Fail -> Pass -> Refactor, so it's to be expected that refactoring your code may cause to tests to fail again. If this happens, simply restart the Fail -> Pass -> Refactor cycle as many times as needed.
+TDD has a life cycle of Fail -> Pass -> Refactor, so it's to be expected that refactoring your code may cause to tests to fail again. If this happens, simply restart the Fail -> Pass -> Refactor cycle as many times as needed.
 
 <img src="screenshots/refactor.png" width="300px">
 
-The tests that will guide your development will be written in the `test/integration_tests.dart` file.
+### Your Objective
 
-**You must write your own tests**
+All Unit and Integration Tests have been written for you in the `test/` directory. Your objective is to write code inside the `lib/` directory to pass all tests.
 
-After writing your tests, write the code to pass your tests in the `lib/screens/` files.
+**Important!**
 
-## Screen 1: Increment
+Each group of tests has a `skip: true` parameter at the end. This means at the start of your homework, all tests will skip. SKIPPED TESTS ARE NOT PASSING TESTS! Make sure to remove the `skip: true` or pass a false value, ex: `skip: false`.
 
-**Given** you are on the Increment page **And** the counter is set to 0,
+## Increment Page
 
-**When** you tap the increment button,
+### Unit Tests
 
-**Then** the counter should become 1.
+**Step 1 - Fail:** Look for the Unit Test group inside `test/unit_tests.dart` and remove the `skip: true` at the end.
 
-<img src="screenshots/screen1.png" width="50%">
+**Step 2 - Pass:** Add code inside `lib/utils/increment.dart` to pass the Unit Tests.
 
-## Screen 2: Converter
+**Step 3 - Refactor:** Go back and refactor code if needed.
 
-**Given** you are on the Feet Converter page **And** the page shows "Yards: 0",
+### Integration Tests
 
-**When** you type 6 into the textfield **And** tap the "Convert" button,
+**Step 1 - Fail:** Look for the Integration Test group inside `test/integration_tests.dart` and remove the `skip: true` at the end.
 
-**Then** the page should show "Yards: 2".
+**Step 2 - Pass:** Add code inside `lib/screens/increment_page.dart` to pass the Integration Tests.
+
+**Step 3 - Refactor:** Go back and refactor code if needed.
+
+**Objective:**
+
+<img src='screenshots/increment.gif'>
+
+## Convert Page
+
+### Unit Tests
+
+**Step 1 - Fail:** Look for the Unit Test group inside `test/unit_tests.dart` and remove the `skip: true` at the end.
+
+**Step 2 - Pass:** Add code inside `lib/utils/convert.dart` to pass the Unit Tests.
+
+**Step 3 - Refactor:** Go back and refactor code if needed.
+
+### Integration Tests
+
+**Step 1 - Fail:** Look for the Integration Test group inside `test/integration_tests.dart` and remove the `skip: true` at the end.
+
+**Step 2 - Pass:** Add code inside `lib/screens/convert_page.dart` to pass the Integration Tests.
+
+**Step 3 - Refactor:** Go back and refactor code if needed.
+
+**Objective:**
+
+<img src='screenshots/convert.gif'>
+
+## Paper Rock Scissors Page
+
+### Unit Tests
+
+**Step 1 - Fail:** Look for the Unit Test group inside `test/unit_tests.dart` and remove the `skip: true` at the end.
+
+**Step 2 - Pass:** Add code inside `lib/utils/paper_rock_scissors.dart` to pass the Unit Tests.
+
+**Step 3 - Refactor:** Go back and refactor code if needed.
+
+### Integration Tests
+
+**Step 1 - Fail:** Look for the Integration Test group inside `test/integration_tests.dart` and remove the `skip: true` at the end.
+
+**Step 2 - Pass:** Add code inside `lib/screens/paper_rock_scissors_page.dart` to pass the Integration Tests.
+
+**Step 3 - Refactor:** Go back and refactor code if needed.
+
+**Objective:**
+
+<img src='screenshots/paperrockscissors.gif'>
 
 <br>
 
-**Given** you are on the Feet Converter page **And** the page shows "Yards: 0",
+## Grading Criteria
 
-**When** you type "bob" into the textfield **And** tap the "Convert" button,
+| Task | Value of each task | Possible Points Lost |
+|---|---|---|
+| Unit Tests - Increment Class | 10 pts | All tests are passing. |
+| Integration Tests - Increment Page | 10 pts | All tests are passing. |
+| Unit Tests - Convert Class | 20 pts | All tests are passing. |
+| Integration Tets - Convert Page | 15 pts | All tests are passing. |
+| Unit Tests - PaperRockScissors Class | 25 pts | All tests are passing. |
+| Integration Tets - PaperRockScissors Page | 20 pts | All tests are passing. |
+| | 100 points total | |
 
-**Then** the page should still show "Yards: 0".
 
-<img src="screenshots/screen2.png" width="50%">
-
-## Screen 3: Has Numbers
-
-**Given** you are on the Has Numbers page **And** the page shows "Has Numbers: false" by default,
-
-**When** you type "be3" into the textfield **And** tap the "Find Numbers" button,
-
-**Then** the page should show "Has Numbers: true".
-
-<br>
-
-**Given** you are on the Has Numbers page **And** the page shows "Has Numbers: false" by default,
-
-**When** you type "bee" into the textfield **And** tap the "Find Numbers" button,
-
-**Then** the page should still show "Has Numbers: false".
-
-<img src="screenshots/screen3.png" width="50%">
-
-## Run Tests
-
-Each time you finish writting your code for a single Screen, go ahead and run the integration test. Use the following commands to run the tests. The tests will also be run by GitHub everytime you push.
-
-### For Codespaces
-
-```
-flutter test test/integration_tests.dart
-```

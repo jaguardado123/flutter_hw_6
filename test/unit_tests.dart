@@ -55,7 +55,7 @@ void main() {
       // 2.5 Miles = 4400 Yards
       expect(converter.miles_to_yards('2.5'), 4400.0);
       // 3.33 Miles = 5860.8 Yards
-      expect(converter.miles_to_yards(3.3), 5860.8);
+      expect(converter.miles_to_yards(3.33), 5860.8);
     });
 
     test('We can convert from Yards to Feet.', () {
