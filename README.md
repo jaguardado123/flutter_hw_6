@@ -10,6 +10,14 @@ TDD has a life cycle of Fail -> Pass -> Refactor, so it's to be expected that re
 
 All Unit and Integration Tests have been written for you in the `test/` directory. Your objective is to write code inside the `lib/` directory to pass all tests.
 
+**Run Unit Tests:**
+
+`flutter test test/unit_tests.dart`
+
+**Run Integration Tests:**
+
+`flutter test test/integration_tests.dart`
+
 **Important!**
 
 Each group of tests has a `skip: true` parameter at the end. This means at the start of your homework, all tests will skip. SKIPPED TESTS ARE NOT PASSING TESTS! Make sure to remove the `skip: true` or pass a false value, ex: `skip: false`.

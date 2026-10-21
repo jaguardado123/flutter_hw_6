@@ -12,6 +12,13 @@ class _ConvertPageState extends State<ConvertPage> {
   Convert _converter = Convert();
   double _value = 0.0;
   TextEditingController _userInputController = TextEditingController();
+
+  @override
+  void dispose() {
+    _userInputController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

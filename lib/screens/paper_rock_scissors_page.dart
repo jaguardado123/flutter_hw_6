@@ -37,31 +37,13 @@ class _PaperRockScissorsPageState extends State<PaperRockScissorsPage> {
 
                     // ==================
                   },
+                  key: const Key('paper-btn'),
                   child: const Text('Paper'),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(12),
-                child: ElevatedButton(
-                  onPressed: () {
-                    // ADD YOUR CODE HERE
+              // ADD YOUR CODE HERE
 
-                    // ==================
-                  },
-                  child: const Text('Rock'),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(12),
-                child: ElevatedButton(
-                  onPressed: () {
-                    // ADD YOUR CODE HERE
-
-                    // ==================
-                  },
-                  child: const Text('Scissors'),
-                ),
-              ),
+              // ==================
             ],
           ),
         ));
